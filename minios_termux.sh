@@ -16,4 +16,5 @@ pkg install fluxbox
 pkg install git
 git clone https://github.com/nhhisme/MiniOS/
 cd MiniOS
+chmod +x main.sh
 ./main.sh
