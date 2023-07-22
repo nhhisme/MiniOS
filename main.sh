@@ -1,9 +1,9 @@
 clear
-echo "EmbCoreOS 0.97_amd64.ub : 511MB of RAM, 1 Processor, 1024MB of Hard Disk"
+echo "Starting MiniOS (Live Boot), please wait!"
 sleep 6
 clear
 sleep 3
-dialog --title "Welcome to EmbCoreOS" --inputbox "Enter your sessions ID (fffff-xxxxx)" 35 30
+dialog --title "Welcome to MiniOS" --inputbox "Enter your ID" 35 30
 sleep 1
 clear
 dialog --infobox "Please wait." 12 10
@@ -48,12 +48,13 @@ clear
 HEIGHT=15
 WIDTH=40
 CHOICE_HEIGHT=4
-BACKTITLE="EmbCoreOS"
+BACKTITLE="MiniOS"
 TITLE="Program Manager"
 MENU="Select one or cancel to shutdown"
 
 OPTIONS=(1 "xterm"
-         2 "fluxbox")
+         2 "fluxbox"
+         3 "dosbox")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -70,6 +71,9 @@ case $CHOICE in
             ;;
         2)
             fluxbox
+            ;;
+        3)
+            dosbox
             ;;
         esac
 dialog --infobox "Please wait." 12 10
