@@ -52,9 +52,8 @@ BACKTITLE="MiniOS"
 TITLE="Program Manager"
 MENU="Select one or cancel to shutdown"
 
-OPTIONS=(1 "xterm"
-         2 "fluxbox"
-         3 "dosbox")
+OPTIONS=(1 "XTerm"
+         2 "Fluxbox")
 
 CHOICE=$(dialog --clear \
                 --backtitle "$BACKTITLE" \
@@ -71,9 +70,6 @@ case $CHOICE in
             ;;
         2)
             fluxbox
-            ;;
-        3)
-            dosbox
             ;;
         esac
 dialog --infobox "Please wait." 12 10
